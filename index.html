@@ -247,7 +247,7 @@ function exportHTML() {
   let html = document.documentElement.outerHTML;
   html = html.replace(
     /<script id="embedded-data" type="application\/json">[\s\S]*?<\/script>/,
-    `<script id="embedded-data" type="application/json">${JSON.stringify(D)}</script>`
+    `<script id="embedded-data" type="application/json">${JSON.stringify(D)}<\/script>`
   );
   const blob = new Blob([html], { type: 'text/html' });
   const a = document.createElement('a');
